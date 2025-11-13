@@ -9,38 +9,59 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .header h1 {
-  color: #333;
+  color: #2d3748;
   margin: 0;
+  font-size: 2rem;
 }
 
 .addButton {
-  background-color: #0070f3;
+  background-color: #4299e1;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(66, 153, 225, 0.2);
 }
 
 .addButton:hover {
-  background-color: #0051a2;
+  background-color: #3182ce;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(66, 153, 225, 0.3);
+}
+
+.addButton:active {
+  transform: translateY(0);
 }
 
 .formContainer {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 5px;
-  margin-bottom: 30px;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border-top: 3px solid #4299e1;
+}
+
+.formContainer h2 {
+  color: #2d3748;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .userForm {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 .formGroup {
@@ -49,94 +70,165 @@
 }
 
 .formGroup label {
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #4a5568;
 }
 
 .formGroup input,
 .formGroup select {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
+  padding: 0.875rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #2d3748;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.formGroup input::placeholder {
+  color: #a0aec0;
 }
 
 .submitButton {
-  background-color: #0070f3;
+  background-color: #4299e1;
   color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
+  padding: 0.875rem 1.75rem;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
   grid-column: span 2;
-  margin-top: 10px;
+  margin-top: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(66, 153, 225, 0.2);
+  width: fit-content;
+  justify-self: start;
 }
 
 .submitButton:hover {
-  background-color: #0051a2;
+  background-color: #3182ce;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(66, 153, 225, 0.3);
+}
+
+.submitButton:active {
+  transform: translateY(0);
 }
 
 .userList {
+  margin-top: 2rem;
+}
+
+.userList h2 {
+  color: #2d3748;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.userGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 .userCard {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 8px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid #4299e1;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.userCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .userCard h3 {
   margin-top: 0;
-  color: #333;
+  color: #2d3748;
+  font-size: 1.3rem;
 }
 
 .userCard p {
-  margin: 10px 0;
+  margin: 0.75rem 0;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.userCard strong {
+  color: #2d3748;
+}
+
+.cardActions {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
 }
 
 .deleteButton {
-  background-color: #ff0000;
+  background-color: #e53e3e;
   color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
 }
 
 .deleteButton:hover {
-  background-color: #cc0000;
+  background-color: #c53030;
 }
 
 .info {
-  background-color: #e3f2fd;
-  border: 1px solid #2196f3;
-  border-radius: 5px;
-  padding: 20px;
-  margin-top: 20px;
+  background-color: #ebf8ff;
+  border: 1px solid #bee3f8;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-left: 4px solid #4299e1;
 }
 
 .info p {
-  margin: 10px 0;
-  color: #333;
+  margin: 0.5rem 0;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+.error {
+  color: #e53e3e;
+  background-color: #fed7d7;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border: 1px solid #feb2b2;
 }
 
 @media (max-width: 768px) {
   .userForm {
     grid-template-columns: 1fr;
   }
-  
+
   .submitButton {
     grid-column: span 1;
   }
-  
-  .userList {
+
+  .userGrid {
     grid-template-columns: 1fr;
   }
 }
