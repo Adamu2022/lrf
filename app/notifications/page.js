@@ -29,7 +29,7 @@ export default function NotificationsPage() {
     sms_config: {
       twilio_sid: '',
       twilio_token: '',
-      phone_number: '',
+      phone_number: process.env.NEXT_PUBLIC_TWILIO_PHONE_NUMBER || '',
     },
     push_config: {
       firebase_service_account_json: '',
@@ -87,6 +87,7 @@ export default function NotificationsPage() {
             sms_config: {
               ...prev.sms_config,
               ...savedSettings.sms_config,
+              phone_number: savedSettings.sms_config?.phone_number || process.env.NEXT_PUBLIC_TWILIO_PHONE_NUMBER || '',
             },
             push_config: {
               ...prev.push_config,
@@ -433,7 +434,7 @@ export default function NotificationsPage() {
                     <label>Phone Number (Sender)</label>
                     <input
                       type="text"
-                      value={settings.sms_config.phone_number || ''}
+                      value={settings.sms_config.phone_number || process.env.NEXT_PUBLIC_TWILIO_PHONE_NUMBER || ''}
                       onChange={(e) => handleInputChange('sms_config', 'phone_number', e.target.value)}
                       placeholder="+1234567890"
                     />
