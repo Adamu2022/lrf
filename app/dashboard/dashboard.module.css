@@ -12,7 +12,36 @@
 
 .welcome h2 {
   margin-top: 0;
-  color: #333;
+  color: #2d3748;
+  /* Darker text for better readability */
+}
+
+.welcome p {
+  color: #4a5568;
+  /* Improved text color */
+}
+
+.infoSection {
+  background-color: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #4299e1;
+}
+
+.infoSection p {
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.infoSection a {
+  color: #4299e1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.infoSection a:hover {
+  text-decoration: underline;
 }
 
 .stats {
@@ -26,14 +55,80 @@
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid #4299e1;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .statCard h3 {
   margin-top: 0;
-  color: #333;
+  color: #2d3748;
+  font-size: 1.25rem;
 }
 
 .statCard p {
-  color: #666;
+  color: #4a5568;
   margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #2d3748;
+  border-bottom: 2px solid #4299e1;
+  padding-bottom: 0.5rem;
+}
+
+.scheduleList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.scheduleCard {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.scheduleCard:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scheduleCard h3 {
+  margin-top: 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.scheduleCard p {
+  margin: 0.5rem 0;
+  color: #495057;
+}
+
+.scheduleCard strong {
+  color: #4299e1;
+}
+
+.error {
+  background-color: #fed7d7;
+  color: #c53030;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
 }

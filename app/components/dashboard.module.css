@@ -5,71 +5,89 @@
 
 .sidebar {
   width: 250px;
-  background-color: #333;
+  background: linear-gradient(180deg, #2d3748 0%, #1a202c 100%);
   color: white;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h2 {
   color: white;
   margin-top: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #4a5568;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
   flex-grow: 1;
+  margin: 1.5rem 0;
 }
 
 .sidebar ul li {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .sidebar ul li a {
-  color: #ddd;
+  color: #e2e8f0;
   text-decoration: none;
   display: block;
-  padding: 0.5rem;
-  border-radius: 4px;
-  transition: background-color 0.2s;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-weight: 500;
 }
 
 .sidebar ul li a:hover,
 .sidebar ul li a.active {
-  background-color: #555;
+  background-color: #4299e1;
   color: white;
+  transform: translateX(2px);
 }
 
 .userSection {
   margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid #555;
+  padding-top: 1.5rem;
+  border-top: 1px solid #4a5568;
 }
 
 .userSection p {
   margin: 0.25rem 0;
-  color: #ccc;
+  color: #cbd5e0;
+  font-size: 0.9rem;
+}
+
+.userSection p:first-child {
+  font-weight: 500;
+  color: #e2e8f0;
 }
 
 .logoutButton {
   width: 100%;
-  padding: 0.5rem;
-  background-color: #e00;
+  padding: 0.75rem;
+  background-color: #e53e3e;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
 }
 
 .logoutButton:hover {
-  background-color: #c00;
+  background-color: #c53030;
 }
 
 .main {
   flex-grow: 1;
   padding: 2rem;
-  background-color: #f5f5f5;
+  background-color: #f8fafc;
+  background-image: linear-gradient(rgba(248, 250, 252, 0.8), rgba(248, 250, 252, 0.8)),
+    radial-gradient(circle at center, rgba(66, 153, 225, 0.05) 0%, transparent 70%);
 }
